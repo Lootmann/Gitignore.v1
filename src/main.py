@@ -1,11 +1,26 @@
 # src/main.py
+import argparse
+
 from api import API
+from cli import CLI
 
 
 def main():
-    # get user input
-    lists = API.get_list()
-    print("\n".join(lists))
+    parser = argparse.ArgumentParser(description="Get .gitignore from gitignore.io")
+
+    parser.add_argument("--list", action="store_true")
+    parser.add_argument("-l", action="store_true")
+    parser.add_argument("languages", nargs="*")
+
+    args = parser.parse_args()
+
+    if args.list or args.l:
+        CLI.print_list(API.get_list())
+        return
+
+    if args.languages:
+        CLI.print(API.get_gitignore(args.languages))
+        return
 
 
 if __name__ == "__main__":
