@@ -21,9 +21,7 @@ gi --list/-l | grep py
 ## API
 
 - list
-
-  - https://www.toptal.com/developers/gitignore/api/list?format=lines
+  - `https://www.toptal.com/developers/gitignore/api/list?format=lines`
 
 - get
-
-  - https://www.toptal.com/developers/gitignore/api/python,pycharm+all
+  - `https://www.toptal.com/developers/gitignore/api/python,pycharm+all`
