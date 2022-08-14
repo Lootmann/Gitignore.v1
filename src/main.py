@@ -18,9 +18,11 @@ def main():
         CLI.print_list(API.get_list())
         return
 
-    if args.languages:
+    if len(args.languages) > 0:
         CLI.print(API.get_gitignore(args.languages))
         return
+
+    parser.print_usage()
 
 
 if __name__ == "__main__":
