@@ -1,7 +1,7 @@
 # src/cli.py
 class CLI:
-    @classmethod
-    def print_list(cls, lst: list):
+    @staticmethod
+    def print_list(lst: list):
         print("\n".join(lst))
 
     @staticmethod
