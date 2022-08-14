@@ -9,6 +9,7 @@ class API:
     @classmethod
     def get_list(cls) -> list:
         """
+        get each language .gitignore lists
 
         :return: language_names list via gitignore.is api
         """
@@ -22,8 +23,7 @@ class API:
     @classmethod
     def get_gitignore(cls, language_names: list) -> str:
         """
-        get_gitignore via gitignore.io api
-
+        get a gitignore via gitignore.io api
         URL: https://www.toptal.com/developers/gitignore/api/python,pycharm+all
 
         :param language_names: list like ["ocaml", "python", "perl", "ruby"]
