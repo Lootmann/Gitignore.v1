@@ -34,4 +34,4 @@ class API:
         if response.status_code != 200:
             raise requests.RequestException(f"Can't get response from '{cls.API_URL}'")
 
-        return response.text
+        return response.text.strip()
