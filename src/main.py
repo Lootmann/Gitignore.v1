@@ -8,8 +8,8 @@ from cli import CLI
 def main():
     parser = argparse.ArgumentParser(description="Get .gitignore from gitignore.io")
 
-    parser.add_argument("--list", action="store_true")
-    parser.add_argument("-l", action="store_true")
+    parser.add_argument("--list", action="store_true", help="show args that can allow language names")
+    parser.add_argument("-l", action="store_true", help="same on above")
     parser.add_argument("languages", nargs="*")
 
     args = parser.parse_args()
