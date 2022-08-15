@@ -6,10 +6,9 @@ class Cache:
     """
     create cache file
 
-    NOTE:
-        if the 'gitignore-list' file has been created before the class is executed
-        and if the file already exists,
-        it outputs the contents of the file without checking its contents.
+    if the 'gitignore-list' file has been created before the class is executed
+    and if the file already exists,
+    it outputs the contents of the file without checking its contents.
     """
 
     CACHE_PATH = Path("~/.cache/gitignore-list").expanduser()
