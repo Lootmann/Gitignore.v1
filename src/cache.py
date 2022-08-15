@@ -3,6 +3,15 @@ from pathlib import Path
 
 
 class Cache:
+    """
+    create cache file
+
+    NOTE:
+        if the 'gitignore-list' file has been created before the class is executed
+        and if the file already exists,
+        it outputs the contents of the file without checking its contents.
+    """
+
     CACHE_PATH = Path("~/.cache/gitignore-list").expanduser()
 
     @classmethod
@@ -12,6 +21,10 @@ class Cache:
     @classmethod
     def create_gitignore_list(cls, ignore_list: list) -> None:
         cls.CACHE_PATH.write_text("\n".join(ignore_list))
+
+    @classmethod
+    def update_gitignore_list(cls, ignore_list: list) -> None:
+        cls.create_gitignore_list(ignore_list)
 
     @classmethod
     def get_ignore_list(cls) -> list:
