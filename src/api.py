@@ -1,6 +1,8 @@
 # src/api.py
 import requests
 
+from cache import Cache
+
 
 class API:
     LIST_URL = "https://www.toptal.com/developers/gitignore/api/list?format=lines"
@@ -13,12 +15,18 @@ class API:
 
         :return: language_names list via gitignore.is api
         """
+        if Cache.exists():
+            return Cache.get_ignore_list()
+
         response = requests.get(cls.LIST_URL)
 
         if response.status_code != 200:
             raise requests.RequestException(f"Can't get response from '{cls.LIST_URL}'")
 
-        return response.text.split("\n")
+        ignore_list = response.text.split("\n")
+        Cache.create_gitignore_list(ignore_list)
+
+        return ignore_list
 
     @classmethod
     def get_gitignore(cls, language_names: list) -> str:
