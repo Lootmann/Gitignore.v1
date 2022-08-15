@@ -11,11 +11,14 @@ create `.gitignore` automatically via `https://www.toptal.com/developers/gitigno
 ```shell
 python3 src/main.py --list
 python3 src/main.py -l
+python3 src/main.py --update
 python3 src/main.py python pycharm
 
 alias gi="python3 ~/.../Gitignore/src/main.py"
 gi --list/-l
 gi --list/-l | grep py
+gi --update
+gi python pycharm+all
 ```
 
 ## API
