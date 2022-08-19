@@ -1,6 +1,12 @@
 # setup.py
 from setuptools import find_packages, setup
 
+
+def load_requirements() -> list:
+    with open("./requirements.txt", "r") as req:
+        return req.read().splitlines()
+
+
 setup(
     name="gi",
     version="0.3.1",
@@ -10,4 +16,5 @@ setup(
             "gi=gi.main:main",
         ],
     },
+    install_requires=load_requirements(),
 )
