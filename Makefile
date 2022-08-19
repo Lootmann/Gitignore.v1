@@ -1,11 +1,11 @@
 run:
-	python3 src/main.py
+	python3 gi/main.py
 
 list:
-	python3 src/main.py --list
+	python3 gi/main.py --list
 
 l:
-	python3 src/main.py -l
+	python3 gi/main.py -l
 
 test:
 	pytest -sv

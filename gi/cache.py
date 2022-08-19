@@ -1,4 +1,4 @@
-# src/cache.py
+# gi/cache.py
 from pathlib import Path
 
 

@@ -1,9 +1,9 @@
-# src/api.py
+# gi/api.py
 import sys
 
 import requests
 
-from cache import Cache
+from gi.cache import Cache
 
 
 class API:

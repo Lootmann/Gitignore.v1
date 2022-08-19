@@ -1,4 +1,4 @@
-# src/cli.py
+# gi/cli.py
 class CLI:
     @staticmethod
     def print_list(lst: list):
