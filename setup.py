@@ -8,12 +8,12 @@ def load_requirements() -> list:
 
 
 setup(
-    name="gi",
+    name="gitignore-list",
     version="0.3.1",
     packages=find_packages(),
     entry_points={
         "console_scripts": [
-            "gi=gi.main:main",
+            "ig=src.main:main",
         ],
     },
     install_requires=load_requirements(),

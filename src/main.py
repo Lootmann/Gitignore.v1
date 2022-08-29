@@ -1,9 +1,9 @@
-# gi/main.py
+# src/main.py
 import argparse
 
-from gi.api import API
-from gi.cache import Cache
-from gi.cli import CLI
+from src.api import API
+from src.cache import Cache
+from src.cli import CLI
 
 
 def main():

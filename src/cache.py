@@ -1,4 +1,4 @@
-# gi/cache.py
+# src/cache.py
 from pathlib import Path
 
 
@@ -19,7 +19,7 @@ class Cache:
 
     @classmethod
     def create_gitignore_list(cls, ignore_list: list) -> None:
-        cls.CACHE_PATH.write_text("\n".join(ignore_list))
+        cls.CACHE_PATH.write_text("\n".join(ignore_list), encoding="utf-8")
 
     @classmethod
     def update_gitignore_list(cls, ignore_list: list) -> None:
@@ -27,4 +27,4 @@ class Cache:
 
     @classmethod
     def get_ignore_list(cls) -> list:
-        return cls.CACHE_PATH.read_text().split("\n")
+        return cls.CACHE_PATH.read_text(encoding="utf-8").split("\n")
